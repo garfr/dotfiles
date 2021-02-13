@@ -8,11 +8,12 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rhysd/vim-clang-format'
+Plug 'ackyshake/Spacegray.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
-colorscheme gruvbox
+let g:airline_theme='base16'
 
 nnoremap <SPACE> <Nop>
 let mapleader=" "
@@ -27,7 +28,15 @@ nnoremap <leader>k :bnext<CR>
 nnoremap <leader>j :bprev<CR>
 nnoremap <leader>cf :ClangFormat<CR>
 
+colorscheme spacegray
+set termguicolors
+
 filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
