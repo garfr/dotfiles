@@ -16,6 +16,9 @@ colorscheme less
 set termguicolors
 set hidden
 
+set cursorline
+set cursorcolumn 
+
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
@@ -35,7 +38,7 @@ set expandtab
 let g:clang_format#auto_format = 1
 
 nnoremap <leader>ga :Git add %:p<CR><CR>
-nnoremap <leader>gs :Git status<CR>
+nnoremap <leader>gs :Git<CR>
 nnoremap <leader>gc :Git commit -v -q<CR>
 nnoremap <leader>gt :Git commit-v -q %:p<CR>
 nnoremap <leader>gd :Git diff<CR>
